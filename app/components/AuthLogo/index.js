@@ -3,6 +3,7 @@ import * as React from "react";
 import styled from "styled-components";
 import GoogleLogo from "./GoogleLogo";
 import MicrosoftLogo from "./MicrosoftLogo";
+import OidcLogo from "./OidcLogo";
 import SlackLogo from "./SlackLogo";
 
 type Props = {|
@@ -30,6 +31,12 @@ function AuthLogo({ providerName, size = 16 }: Props) {
           <MicrosoftLogo size={size} />
         </Logo>
       );
+    case "oidc":
+      return (
+        <Logo>
+          <OidcLogo size={size} />
+        </Logo>
+      )
     default:
       return null;
   }
