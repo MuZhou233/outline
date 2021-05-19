@@ -2,6 +2,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import GoogleLogo from "./GoogleLogo";
+import KeyCloakLogo from "./KeyCloakLogo";
 import MicrosoftLogo from "./MicrosoftLogo";
 import SlackLogo from "./SlackLogo";
 
@@ -28,6 +29,12 @@ function AuthLogo({ providerName, size = 16 }: Props) {
       return (
         <Logo>
           <MicrosoftLogo size={size} />
+        </Logo>
+      );
+    case "keycloak":
+      return (
+        <Logo>
+          <KeyCloakLogo size={size} />
         </Logo>
       );
     default:
